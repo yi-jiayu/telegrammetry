@@ -1,0 +1,72 @@
+[
+  {
+    "_id": "573a2480-bcb9-11e8-a72f-7d8b60ab586e",
+    "_type": "visualization",
+    "_source": {
+      "title": "Incoming and outgoing group messages",
+      "visState": "{\"title\":\"Incoming and outgoing group messages\",\"type\":\"pie\",\"params\":{\"addLegend\":true,\"addTooltip\":true,\"isDonut\":true,\"labels\":{\"last_level\":true,\"show\":false,\"truncate\":100,\"values\":true},\"legendPosition\":\"right\",\"type\":\"pie\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"filters\",\"schema\":\"segment\",\"params\":{\"filters\":[{\"input\":{\"query\":\"out: true\"},\"label\":\"Outgoing private messages\"},{\"input\":{\"query\":\"out: false\"},\"label\":\"Incoming private messages\"}]}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"key\":\"query\",\"negate\":false,\"type\":\"custom\",\"value\":\"{\\\"match_all\\\":{}}\"},\"query\":{\"match_all\":{}}},{\"meta\":{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"private\",\"value\":\"false\",\"params\":{\"query\":false,\"type\":\"phrase\"}},\"query\":{\"match\":{\"private\":{\"query\":false,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"(out: true OR out: false)\"}}"
+      }
+    }
+  },
+  {
+    "_id": "31ab4da0-bcb6-11e8-a72f-7d8b60ab586e",
+    "_type": "visualization",
+    "_source": {
+      "title": "Incoming and outgoing private messages",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"filters\":[{\"input\":{\"query\":\"out: true\"},\"label\":\"Outgoing private messages\"},{\"input\":{\"query\":\"out: false\"},\"label\":\"Incoming private messages\"}]},\"schema\":\"segment\",\"type\":\"filters\"}],\"params\":{\"addLegend\":true,\"addTooltip\":true,\"isDonut\":true,\"labels\":{\"last_level\":true,\"show\":false,\"truncate\":100,\"values\":true},\"legendPosition\":\"right\",\"type\":\"pie\"},\"title\":\"Incoming and outgoing private messages\",\"type\":\"pie\"}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"key\":\"query\",\"negate\":false,\"type\":\"custom\",\"value\":\"{\\\"match_all\\\":{}}\"},\"query\":{\"match_all\":{}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"key\":\"private\",\"negate\":false,\"params\":{\"query\":true,\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"true\"},\"query\":{\"match\":{\"private\":{\"query\":true,\"type\":\"phrase\"}}}}],\"query\":{\"language\":\"lucene\",\"query\":\"(out: true OR out: false)\"}}"
+      }
+    }
+  },
+  {
+    "_id": "8d0496e0-bcb9-11e8-a72f-7d8b60ab586e",
+    "_type": "visualization",
+    "_source": {
+      "title": "Incoming group messages today by chat",
+      "visState": "{\"title\":\"Incoming group messages today by chat\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"from_id\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"filter\":[{\"meta\":{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"out\",\"value\":\"false\",\"params\":{\"query\":false,\"type\":\"phrase\"}},\"query\":{\"match\":{\"out\":{\"query\":false,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"private\",\"value\":\"false\",\"params\":{\"query\":false,\"type\":\"phrase\"}},\"query\":{\"match\":{\"private\":{\"query\":false,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "071c6aa0-bcb7-11e8-a72f-7d8b60ab586e",
+    "_type": "visualization",
+    "_source": {
+      "title": "Incoming private messages today by contact",
+      "visState": "{\"title\":\"Incoming private messages today by contact\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"from_id\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"filter\":[{\"meta\":{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"out\",\"value\":\"false\",\"params\":{\"query\":false,\"type\":\"phrase\"}},\"query\":{\"match\":{\"out\":{\"query\":false,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"private\",\"value\":\"true\",\"params\":{\"query\":true,\"type\":\"phrase\"}},\"query\":{\"match\":{\"private\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "d3ac3bf0-bcb6-11e8-a72f-7d8b60ab586e",
+    "_type": "visualization",
+    "_source": {
+      "title": "Outgoing messages today by chat",
+      "visState": "{\"title\":\"Outgoing messages today by chat\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"to_id\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"filter\":[{\"meta\":{\"index\":\"ed723460-bcb4-11e8-a72f-7d8b60ab586e\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"out\",\"value\":\"true\",\"params\":{\"query\":true,\"type\":\"phrase\"}},\"query\":{\"match\":{\"out\":{\"query\":true,\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  }
+]

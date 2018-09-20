@@ -1,0 +1,13 @@
+- key: telegrambeat
+  title: telegrambeat
+  description:
+  fields:
+    - name: out
+      type: boolean
+      required: true
+    - name: to_id
+      type: long
+    - name: from_id
+      type: long
+    - name: timestamp
+      type: date

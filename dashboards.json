@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "2cd0ab30-bcb7-11e8-a72f-7d8b60ab586e",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Telegram statistics",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":3,\"h\":3,\"i\":\"1\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"31ab4da0-bcb6-11e8-a72f-7d8b60ab586e\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":0,\"y\":3,\"w\":6,\"h\":3,\"i\":\"2\"},\"id\":\"071c6aa0-bcb7-11e8-a72f-7d8b60ab586e\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":6,\"y\":0,\"w\":6,\"h\":3,\"i\":\"4\"},\"id\":\"d3ac3bf0-bcb6-11e8-a72f-7d8b60ab586e\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":3,\"y\":0,\"w\":3,\"h\":3,\"i\":\"5\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"573a2480-bcb9-11e8-a72f-7d8b60ab586e\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":6,\"y\":3,\"w\":6,\"h\":3,\"i\":\"6\"},\"version\":\"6.2.4\",\"type\":\"visualization\",\"id\":\"8d0496e0-bcb9-11e8-a72f-7d8b60ab586e\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  }
+]

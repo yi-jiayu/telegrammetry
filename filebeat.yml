@@ -1,0 +1,34 @@
+filebeat.prospectors:
+
+# Each - is an input. Most options can be set at the input level, so
+# you can use different inputs for various configurations.
+# Below are the input specific configurations.
+
+- type: log
+
+  # Change to true to enable this input configuration.
+  enabled: true
+
+  # Paths that should be crawled and fetched. Glob based paths.
+  paths:
+    - /Users/yijiayu/PycharmProjects/tgrm/jiayu.log
+
+  json.keys_under_root: true
+
+#================================ Outputs =====================================
+
+# Configure what output to use when sending the data collected by the beat.
+
+#-------------------------- Elasticsearch output ------------------------------
+output.elasticsearch:
+  # Array of hosts to connect to.
+  hosts: ["localhost:9200"]
+
+  template:
+    overwrite: true
+
+#================================ Logging =====================================
+
+# Sets log level. The default log level is info.
+# Available log levels are: error, warning, info, debug
+#logging.level: debug
