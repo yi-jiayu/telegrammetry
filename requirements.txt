@@ -1,0 +1,5 @@
+async-generator==1.10
+pyaes==1.6.1
+pyasn1==0.4.4
+rsa==4.0
+Telethon==1.2
