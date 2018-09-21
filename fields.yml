@@ -1,13 +1,41 @@
-- key: telegrambeat
-  title: telegrambeat
-  description:
+- key: telegram
+  title: "Telegram"
+  description: >
+    Telegram message fields.
   fields:
-    - name: out
+    - name: id
+      type: integer
+      description: >
+        Message ID.
+    - name: outgoing
       type: boolean
-      required: true
+      description: >
+        Whether the message was sent by the logged-in user.
+    - name: private
+      type: boolean
+      description: >
+        Whether the message was sent directly to a Telegram contact, rather than a group chat or channel.
     - name: to_id
-      type: long
+      type: keyword
+      description: >
+        ID of the message recipient. Could be a user, group chat or channel ID.
     - name: from_id
-      type: long
+      type: keyword
+      description: >
+        ID of the message sender.
     - name: timestamp
       type: date
+      description: >
+        Message timestamp.
+    - name: text
+      type: text
+      description: >
+        Message text.
+    - name: media
+      type: keyword
+      description: >
+        Message media. See https://lonamiwebs.github.io/Telethon/types/message_media.html for possible media types.
+    - name: chat
+      type: keyword
+      description: >
+        ID of the chat the message was sent in. Could be a user, group chat or channel ID.
