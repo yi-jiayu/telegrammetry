@@ -16,6 +16,7 @@ A Telegram relationship manager which shows you a dashboard of your Telegram act
 ```
 python messages.py > messages.log
 ```
+Note: You need to run `messages.py` at least once first to set up your Telegram session on a new device with the code that will be sent to you.
 
 3. Start Elasticsearch
 
