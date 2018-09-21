@@ -1,9 +1,9 @@
 from configparser import ConfigParser
-from telethon import TelegramClient, events
-from telethon.tl.types import PeerChannel, PeerChat, PeerUser
 import json
 import logging
-from telethon.events import StopPropagation
+
+from telethon import TelegramClient, events
+from telethon.tl.types import PeerChannel, PeerChat, PeerUser
 
 logging.basicConfig(level=logging.WARNING)
 
@@ -43,9 +43,8 @@ if __name__ == '__main__':
 
 
     @client.on(events.NewMessage)
-    def _(e):
-        # print(e)
+    async def _(e):
         print(Message(e).to_json())
-        raise StopPropagation
+
 
     client.run_until_disconnected()
