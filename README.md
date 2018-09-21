@@ -1,7 +1,7 @@
 # tgrm
 A Telegram relationship manager which shows you a dashboard of your Telegram activity.
 
-![tgrm dashboard](https://user-images.githubusercontent.com/11734309/45869867-265e0f80-bdbc-11e8-814f-0ee260c14728.png)
+![tgrm dashboard](https://user-images.githubusercontent.com/11734309/45871491-3841b180-bdc0-11e8-84d4-a8b29a51c5ea.png)
 
 ## Dependencies
 - Python (tested with 3.7)
