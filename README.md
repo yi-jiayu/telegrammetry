@@ -14,7 +14,7 @@ A Telegram relationship manager which shows you a dashboard of your Telegram act
 
 2. Run `messages.py` and redirect its output to a file:
 ```
-python messages.py > messages.log
+PYTHONUNBUFFERED=1 python messages.py > messages.log
 ```
 Note: You need to run `messages.py` at least once first to set up your Telegram session on a new device with the code that will be sent to you.
 
