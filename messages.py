@@ -23,12 +23,12 @@ class Message:
         else:
             raise RuntimeError('invalid peer: ', self.to_id)
 
+        self.from_id = msg.from_id
         if self.private:
             self.chat = self.to_id if self.outgoing else self.from_id
         else:
             self.chat = self.to_id
 
-        self.from_id = msg.from_id
         self.timestamp = msg.date.isoformat()
         self.text = msg.message.message
         self.media = type(msg.media).__name__ if msg.media is not None else ""
