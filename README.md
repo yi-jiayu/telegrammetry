@@ -1,7 +1,7 @@
-# tgrm
-A Telegram relationship manager which shows you a dashboard of your Telegram activity.
+# Telemetry
+Stats for Telegram
 
-![tgrm dashboard](https://user-images.githubusercontent.com/11734309/45871491-3841b180-bdc0-11e8-84d4-a8b29a51c5ea.png)
+![tgrm dashboard](https://user-images.githubusercontent.com/11734309/45936202-7cae9680-bfe6-11e8-974a-8c22eb20ed2f.png)
 
 ## Dependencies
 - Python (tested with 3.7)
