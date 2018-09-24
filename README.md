@@ -1,4 +1,4 @@
-# Telemetry
+# Telegrammetry
 Stats for Telegram
 
 ![tgrm dashboard](https://user-images.githubusercontent.com/11734309/45936202-7cae9680-bfe6-11e8-974a-8c22eb20ed2f.png)
